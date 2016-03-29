@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+ <head>
+  <style>
+// Workaround for a https://dev.vaadin.com/ticket/19170 to get hidden icons in some environments to show
+#responsive-application-template.valo-menu-responsive .valo-menu-part .valo-menu-item span.v-icon {
+	opacity: 1.0;
+}
+ </style> 
+  <meta charset="UTF-8" name="design-properties" content="{&quot;RULERS_VISIBLE&quot;:true,&quot;GUIDELINES_VISIBLE&quot;:false,&quot;SNAP_TO_OBJECTS&quot;:true,&quot;SNAP_TO_GRID&quot;:true,&quot;SNAPPING_DISTANCE&quot;:10,&quot;JAVA_SOURCES_ROOT&quot;:&quot;src/main/java&quot;,&quot;THEME&quot;:&quot;dashboard&quot;}">
+ </head> 
+ <body> 
+  <vaadin-horizontal-layout style-name="mainview" responsive id="responsive-application-template" size-full> 
+   <vaadin-css-layout style-name="valo-menu" id="pos-menu" _id="pos_menu"> 
+    <vaadin-css-layout style-name="valo-menu-part sidebar no-vertical-drag-hints no-horizontal-drag-hints" height-full> 
+     <vaadin-horizontal-layout style-name="valo-menu-title" width-full> 
+      <vaadin-label size-auto _id="logo" :middle :center :expand>
+        POS 
+       <strong>Application</strong> 
+      </vaadin-label> 
+     </vaadin-horizontal-layout> 
+     <vaadin-menu-bar style-name="user-menu" id="settings" plain-text _id="settings"></vaadin-menu-bar> 
+     <vaadin-button icon="fonticon://FontAwesome/f03a" style-name="primary valo-menu-toggle borderless small" id="valoMenuToggleButton" plain-text _id="valoMenuToggleButton">
+       Menu 
+     </vaadin-button> 
+     <vaadin-css-layout style-name="valo-menuitems" id="menuItemsLayout" _id="menuItemsLayout"> 
+      <vaadin-button icon="fonticon://FontAwesome/f080" primary-style-name="valo-menu-item" _id="salesButton">
+        Sales 
+      </vaadin-button> 
+      <vaadin-button icon="fonticon://FontAwesome/f187" primary-style-name="valo-menu-item" _id="inventryButton">
+        Inventry 
+      </vaadin-button> 
+      <vaadin-button icon="fonticon://FontAwesome/f1de" primary-style-name="valo-menu-item" _id="settingsButton">
+        Settings 
+      </vaadin-button> 
+     </vaadin-css-layout> 
+    </vaadin-css-layout> 
+   </vaadin-css-layout> 
+   <vaadin-css-layout style-name="view-content" responsive width-full _id="viewContainer" :expand></vaadin-css-layout> 
+  </vaadin-horizontal-layout>  
+ </body>
+</html>
